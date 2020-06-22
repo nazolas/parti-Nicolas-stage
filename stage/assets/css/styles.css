@@ -1,0 +1,349 @@
+.section-couleur {
+  background-color: #F39C12;
+}
+
+.containere {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  min-height: 100%;
+  margin: 0px auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.element-card {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotatey(0deg) translatex(0px) translatey(0px);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  margin: 5px;
+  cursor: pointer;
+}
+.element-card:hover {
+  transform: rotatey(45deg) translatex(0px) translatey(0px);
+}
+.element-card.open {
+  width: 400px;
+  height: 200px;
+  transform: rotatey(-180deg) translatex(0px) translatey(0px);
+}
+.element-card .front-facing {
+  transform: rotateY(0deg) translateZ(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ecf0f1;
+  border: 2px white solid;
+  border-radius: 5px;
+}
+.element-card .front-facing .abr {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 42px;
+  margin: -35px 0 0 0;
+  text-align: center;
+  color: #9f2bff;
+}
+.element-card .front-facing .title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 15px 0 0 0;
+  text-align: center;
+  color: #9f2bff;
+}
+.element-card .front-facing .atomic-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #29F275;
+}
+.element-card .front-facing .atomic-mass {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #29F275;
+}
+.element-card .back-facing {
+  transform: rotateY(180deg) translateZ(0px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ecf0f1;
+  border: 2px white solid;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.element-card .back-facing p {
+  font-size: 14px;
+  margin: 0;
+}
+.element-card .back-facing a.btn {
+  display: inline-block;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 20px 0 0 0;
+  color: #eee;
+  background-color: #9f2bff;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.element-card .back-facing a.btn:hover, .element-card .back-facing a.btn:focus {
+  color: #fff;
+  background-color: #29F275;
+}
+
+.bt {
+  border: solid 0.3em #F39C12;
+  border-top-color: transparent;
+  width: auto;
+  -webkit-box-shadow: -13px 16px 5px 0px gray;
+  -moz-box-shadow: -13px 16px 5px 0px gray;
+  box-shadow: -13px 16px 5px 0px gray;
+}
+
+.image {
+  height: 7vh;
+  border-right: 7vh solid transparent;
+  border-bottom: 7vh solid #29F275;
+}
+
+.haut {
+  height: 300px;
+}
+
+/* 
+** Layout, Text & Colors 
+*/
+/* Cards */
+.card-column {
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+.column-1 {
+  padding-top: 100px;
+}
+
+.card1 {
+  width: 92%;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #EB5160;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.border1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  left: -6px;
+  top: -6px;
+}
+
+.card1 h1 {
+  position: relative;
+  padding: 230px 0px 100px 10px;
+  width: 90%;
+}
+
+.card1 > img {
+  width: 90%;
+  position: absolute;
+  top: -6%;
+  left: -6%;
+}
+
+.card-color-0 {
+  background-color: #9f2bff;
+}
+
+.card-color-1 {
+  background-color: #29F275;
+}
+
+.card-color-2 {
+  background-color: #a6711c;
+}
+
+.card-color-3 {
+  background-color: #6604b8;
+}
+
+/* The cover (expanding background) */
+.cover {
+  position: fixed;
+  background: #EB5160;
+  z-index: 100;
+  transform-origin: 50% 50%;
+}
+
+/* The open page content */
+.open-content {
+  width: 100%;
+  z-index: 110;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.open-content img {
+  position: relative;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  z-index: 5;
+}
+
+.open-content .text {
+  background: #fff;
+  margin-top: -56%;
+  padding: 60% 5% 5% 5%;
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.open-content .text h1, .open-content .text p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-content {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-content span {
+  background: #222;
+  width: 30px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 14px;
+}
+
+.x-1 {
+  transform: rotate(45deg);
+}
+
+.x-2 {
+  transform: rotate(-45deg);
+}
+
+/* 
+** Transitions
+*/
+.card1 {
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+}
+
+.border {
+  transition: opacity 200ms linear, transform 200ms ease-out;
+}
+
+.card1 img {
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+}
+
+.card1 h1 {
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+}
+
+/* Clicked card */
+.card1.clicked img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card1.clicked .border {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.card1.out, .card.out img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card1.out h1, .card.clicked h1 {
+  transform: translate3d(20%, -40px, 0px);
+  opacity: 0;
+}
+
+.cover {
+  transition: transform 300tms ease-in-out;
+}
+
+.open-content {
+  transition: opacity 200ms linear 0ms;
+}
+
+.open-content.open {
+  opacity: 1;
+  pointer-events: all;
+  transition-delay: 1000ms;
+}
+
+/* 
+** Media Queries
+*/
+@media screen and (max-width: 600px) {
+  .card-column {
+    width: 500px;
+  }
+
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .column-1 {
+    padding-top: 0px;
+  }
+
+  .open-content img {
+    margin-top: 40px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
