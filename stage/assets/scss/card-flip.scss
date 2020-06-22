@@ -21,7 +21,7 @@ $colorSecundaryDarker : #6604b8;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: wrap;//test
 	justify-content: center;
 	align-items: center;
 }
@@ -133,3 +133,9 @@ $colorSecundaryDarker : #6604b8;
 	}
 
 }
+ @media  screen and (width: 1440px) {
+     .containere{
+		flex-wrap: nowrap;//test
+ 	}
+	
+ }

@@ -119,6 +119,11 @@
   background-color: #29F275;
 }
 
+@media screen and (width: 1440px) {
+  .containere {
+    flex-wrap: nowrap;
+  }
+}
 .bt {
   border: solid 0.3em #F39C12;
   border-top-color: transparent;
@@ -328,10 +333,6 @@
 ** Media Queries
 */
 @media screen and (max-width: 600px) {
-  .card-column {
-    width: 500px;
-  }
-
   .stop-scrolling {
     height: 100%;
     overflow: hidden;
@@ -343,6 +344,24 @@
 
   .open-content img {
     margin-top: 40px;
+  }
+}
+@media screen and (width: 1440px) {
+  .card1 {
+    width: 75%;
+    max-width: 255px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 0px;
+  }
+
+  .card1 h1 {
+    position: relative;
+    padding: 150px 0px 50px 10px;
+    width: 100%;
   }
 }
 
